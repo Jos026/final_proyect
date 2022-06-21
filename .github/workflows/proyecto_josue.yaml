@@ -3,7 +3,7 @@ name: proyecto_josue
 on: [push]
 
 jobs:
-  fase-CI:
+  CI:
     runs-on: ubuntu-latest
     steps:
       - name: Main Code Download 
@@ -31,5 +31,14 @@ jobs:
         with:
           name: dist-files
           path: dist
-
+  CD:
+    runs-on: JOS-PC
+    needs: CI
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+      - name: List files
+        run: ls
 
