@@ -40,7 +40,7 @@ jobs:
         with:
           name: dist-files
       - name: List files
-        run: ls
+        run: dir
       #- name: Deploy
       #  run: cp repos_ucreativa/* /var/www/josue/
 
