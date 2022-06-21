@@ -15,7 +15,7 @@ jobs:
       - name: Node Version Verification
         run: node -v
       - name: Dependency instalation
-        run: npm run install
+        run: npm install
       - name: Lint test
         run: npm run lint
       - name: Unit test
