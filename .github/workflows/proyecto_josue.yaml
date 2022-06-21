@@ -16,13 +16,13 @@ jobs:
         run: node -v
       - name: Dependency instalation
         run: npm install
-      - name: Sonarscanner installation
-        run: npm install -g sonar-scanner
+      #- name: Sonarscanner installation
+      #  run: npm install -g sonar-scanner
       #- name: Lint test
       #  run: npm run lint
       - name: Unit test
         run: npm run test
-      - name: SonarQube scan
-        run: npm run sonar
+      #- name: SonarQube scan
+      #  run: npm run sonar
 
 
