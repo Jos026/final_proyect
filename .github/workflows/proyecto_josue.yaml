@@ -32,7 +32,7 @@ jobs:
           name: dist-files
           path: dist
   CD:
-    `runs-on: self-hosted
+    runs-on: self-hosted
     needs: CI
     steps:
       - name: Download artifact
