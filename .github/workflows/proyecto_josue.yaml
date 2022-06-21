@@ -24,5 +24,12 @@ jobs:
         run: npm run test
       #- name: SonarQube scan
       #  run: npm run sonar
+      - name: Build App
+        run: npm run build
+      - name: Upload files to GitHub
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: dist
 
 
