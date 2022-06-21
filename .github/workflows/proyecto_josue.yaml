@@ -32,7 +32,7 @@ jobs:
           name: dist-files
           path: dist
   CD:
-    runs-on: JOS-PC
+    `runs-on: self-hosted
     needs: CI
     steps:
       - name: Download artifact
@@ -41,4 +41,6 @@ jobs:
           name: dist-files
       - name: List files
         run: ls
+      #- name: Deploy
+      #  run: cp repos_ucreativa/* /var/www/josue/
 
