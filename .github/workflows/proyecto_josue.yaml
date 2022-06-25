@@ -39,6 +39,8 @@ jobs:
           name: dist-files
       - name: List files
         run: dir
-      #- name: Deploy
-      #  run: cp repos_ucreativa/* /var/www/josue/
+      - name: Deploy
+        run: iisreset /stop
+        run: Copy-Item repos_ucreativa/* /var/www/josue -Recurse -Force
+        run: iisreset /start
 
